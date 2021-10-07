@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'WalletTransactionService' " />
+	<ItemGroup>
+		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+			<GlobalPropertiesToRemove>
+			</GlobalPropertiesToRemove>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="MediatR" />
+		<None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+		<None Remove="Swashbuckle.AspNetCore" />
+		<None Remove="Swashbuckle.AspNetCore.Swagger" />
+		<None Remove="Data\" />
+		<None Remove="Data\Persistence\" />
+		<None Remove="Data\Models\" />
+		<None Remove="Data\Persistence\Entities\" />
+		<None Remove="Data\Enums\" />
+		<None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+		<None Remove="Microsoft.EntityFrameworkCore" />
+		<None Remove="Application\" />
+		<None Remove="Application\Features\" />
+		<None Remove="Application\Features\WalletTransaction\" />
+		<None Remove="Application\Features\WalletTransaction\Services\" />
+		<None Remove="Application\Features\WalletTransaction\Queries\" />
+		<None Remove="Application\Features\WalletTransaction\Events\" />
+		<None Remove="Application\Features\WalletTransaction\Commands\" />
+		<None Remove="Providers\" />
+		<None Remove="Providers\CryptoQuery\" />
+		<None Remove="Data\Persistence\Configurations\" />
+		<None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+		<None Remove="AutoMapper" />
+		<None Remove="Application\AutoMapperProfiles\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="9.0.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+		<PackageReference Include="AutoMapper" Version="10.1.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Data\" />
+		<Folder Include="Data\Persistence\" />
+		<Folder Include="Data\Models\" />
+		<Folder Include="Data\Persistence\Entities\" />
+		<Folder Include="Data\Enums\" />
+		<Folder Include="Application\" />
+		<Folder Include="Application\Features\" />
+		<Folder Include="Application\Features\WalletTransaction\" />
+		<Folder Include="Application\Features\WalletTransaction\Services\" />
+		<Folder Include="Application\Features\WalletTransaction\Queries\" />
+		<Folder Include="Application\Features\WalletTransaction\Events\" />
+		<Folder Include="Application\Features\WalletTransaction\Commands\" />
+		<Folder Include="Providers\" />
+		<Folder Include="Providers\CryptoQuery\" />
+		<Folder Include="Data\Persistence\Configurations\" />
+		<Folder Include="Application\AutoMapperProfiles\" />
+	</ItemGroup>
+</Project>
